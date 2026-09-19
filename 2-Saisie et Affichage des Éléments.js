@@ -1,7 +1,7 @@
 const prompt = require("prompt-sync")();
 let lenght = Number(prompt("Entrer le nombre d'éléments du tableau: "));
 
-let tableau = [];
+const tableau = [];
 let i = 0;
 while (i < lenght) {
     let element = prompt("saisir l'élément: ");
