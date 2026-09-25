@@ -1,23 +1,17 @@
 const prompt = require (`prompt-sync`)();
-let lenght = Number(prompt("Entrer le nombre d'éléments du tableau: "));
+const nombreElements = Number(prompt("Entrer le nombre d'éléments du tableau: "));
 
-const tableau = [];
-let i = 0;
-
-while (i < lenght) {
-    let element = Number(prompt("saisir l'élément: "));
-    tableau.push(element);
-    i++;
+const tab = [];
+for(let i = 0; i < nombreElements; i++){
+    const elements = Number(prompt("Entrer les nombres: "))
+    tab.push(elements);
 }
 
-let max = tableau [0];
-i = 1;
-
-while (i < lenght){
-    if (tableau[i] > max){
-        max = tableau[i];
+let max = tab[0];
+for(let i = 0; i < tab.length; i++){
+    if (tab[i] > max){
+        max = tab[i];
     }
-    i++;
 }
 
 console.log(`Le plus grand élément dans ce tableau est: ${max}`);
